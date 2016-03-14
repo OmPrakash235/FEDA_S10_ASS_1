@@ -1,0 +1,32 @@
+<!--Make a form with two inputs and a submit button. Show details in a table and when we make
+changes to input table, value also changes.-->
+
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<title>AngularJS</title>
+		<style type="text/css">
+			body { font-family: arial; font-size: 14px; }
+			input { border: 1px solid #d5d5d5; padding: 3px 7px; }
+			input:focus { border: 1px solid #188cef; }
+			td { border: 1px solid #d5d5d5; min-width: 150px; height: 30px; padding: 0 5px; }
+		</style>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	</head>
+	<body>
+		<center>
+			<h3>Form</h3>
+			<form>
+				<label>Name: </label><input type="text" ng-model="name"/><br/><br/>
+				<label>Email: </label><input type="text" ng-model="email"/><br/><br/>
+				<button>Submit</button>
+			</form>
+			<br/>
+			<h3>Table</h3>
+			<table cellspacing="0">
+				<tr><td>Name</td><td>Email</td></tr>
+				<tr><td>{{name}}</td><td>{{email}}</td></tr>
+			</table>
+		</center>
+	</body>
+</html>
